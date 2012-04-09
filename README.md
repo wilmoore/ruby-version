@@ -169,22 +169,29 @@ Using (Switching Versions)
 
 **Call it like this in your terminal**
 
-    $ ruby-version 1.9.3-rc1
+    % ruby-version 1.9.3-rc1
 
 **Bash Completion**
 
     % ruby-version 1.[PRESS-TAB-NOW]
 
 
-Build/compile Recommendations
+Building RUBY from Source
 -----------------------------
 
-The following directory structure is not required; however, it is a recommendation that you can modify to your liking.
+**ruby-version** doesn't care how you've obtained your RUBY versions; it only cares that you've stored them neatly
+under a common directory structure. You may build multiple RUBY versions manually by typing:
+
+    $ ./configure --prefix=... && make && make install
+
+or via a tool such as [ruby-build](https://github.com/sstephenson/ruby-build).
+
+**The following directory structure or equivalent is recommended (but not required):**
 
     % mkdir -p $HOME/local/ruby/download/
-    % mkdir -p $HOME/local/ruby/versions/${RUBY_VERSION}/src
+    % mkdir -p $HOME/local/ruby/versions/{1.9.2,1.9.3-rc1}/src
 
-The following `configure`, `make`, and `make install` are also not required; however, tend to make life easier:
+The following `configure`, `make`, and `make install` commands are the bare minimum for building on MAC OSX:
 
     % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml) --with-gcc=clang
     % make && make install
@@ -196,12 +203,10 @@ is likely not for you. In that case, your `configure` line would be:
     % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml)
     % make && make install
 
-**ruby-version** assumes that you intend to compile multiple RUBY versions manually or via a tool such as [ruby-build](https://github.com/sstephenson/ruby-build).
-
 **NOTE**: RUBY expects that you've installed a Yaml library such as `libyaml`. You may install `libyaml` manually or you can
 use homebrew:
 
-    $ brew install libyaml
+    % brew install libyaml
 
 At this point, when you compile RUBY, you need to pass to the flag `--with-opt-dir=` you `libyaml` install directory.
 
@@ -227,19 +232,19 @@ Troubleshooting
 
 **Sorry, but ruby-version requires that \$RUBY_VERSIONS is set and points to an existing directory.**
 
--   The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
+The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
 
     % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version 1.9.3-rc1
 
 **Sorry, but ruby-version requires that the environment variable \$RUBY_VERSIONS is set in order to initialize bash completion.**
 
--   The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
+The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
 
     % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version 1.9.3-rc1
 
 **Sorry, but ruby-version was unable to find directory '1.9.3-rc1' under '/home/your-user/local/ruby/versions'.**
 
--   The version was entered incorrectly **(i.e. "ruby-version 1.9.i" instead of "ruby-version 1.9.3-rc1")** or you haven't yet compiled the given version.
+The version was entered incorrectly **(i.e. "ruby-version 1.9.i" instead of "ruby-version 1.9.3-rc1")** or you haven't yet compiled the given version.
 
 
 Resources
