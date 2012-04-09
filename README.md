@@ -133,8 +133,8 @@ Activate Default RUBY version
 Configuration for standard installs
 
     ########################################################################################
-    # ruby-version (activate default PHP version and autocompletion)
-    # export RUBY_VERSIONS                  => reflects location of compiled PHP versions
+    # ruby-version (activate default RUBY version and autocompletion)
+    # export RUBY_VERSIONS                  => reflects location of compiled RUBY versions
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
@@ -143,8 +143,8 @@ Configuration for standard installs
 Configuration for Homebrew installs
 
     ########################################################################################
-    # ruby-version (activate default PHP version and autocompletion)
-    # export RUBY_VERSIONS                  => reflects location of compiled PHP versions
+    # ruby-version (activate default RUBY version and autocompletion)
+    # export RUBY_VERSIONS                  => reflects location of compiled RUBY versions
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
