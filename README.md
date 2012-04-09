@@ -189,7 +189,7 @@ The following `configure`, `make`, and `make install` are also not required; how
     % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml) --with-gcc=clang
     % make && make install
 
-NOTE: drop the `--with-gcc=clang` if you don't have clang. If you are on MAC OSX Lion, you probably want to keep the flag
+**NOTE**: drop the `--with-gcc=clang` if you don't have clang. If you are on MAC OSX Lion, you probably want to keep the flag
 `--with-gcc=clang`; however, if you are on Linux and you've never heard of clang or know you didn't opt-into it, this option
 is likely not for you. In that case, your `configure` line would be:
 
@@ -198,10 +198,12 @@ is likely not for you. In that case, your `configure` line would be:
 
 **ruby-version** assumes that you intend to compile multiple RUBY versions manually or via a tool such as [ruby-build](https://github.com/sstephenson/ruby-build).
 
-**ruby-version** assumes that you've installed `libyaml`. You may install this yourself and modify the flag `--with-opt-dir=`
-to point to where you've install `libyaml` or you can use homebrew:
+**NOTE**: RUBY expects that you've installed a Yaml library such as `libyaml`. You may install `libyaml` manually or you can
+use homebrew:
 
     $ brew install libyaml
+
+At this point, when you compile RUBY, you need to pass to the flag `--with-opt-dir=` you `libyaml` install directory.
 
 
 FAQ
