@@ -240,14 +240,14 @@ FAQ
 **What if my Ruby versions are not stored neatly under a single directory like `$HOME/local/ruby/versions`?**
 
 
-    % RUBY_VERSIONS=/usr/local/Cellar/ruby ruby-version 1.9.3-rc1
+    % RUBY_VERSIONS=/usr/local/Cellar/ruby ruby-version ruby-1.9.3-p125
 
-    SWITCHED RUBY VERSION TO: 1.9.3-rc1
-    NEW RUBY ROOT DIRECTORY : /usr/local/Cellar/ruby/1.9.3-rc1
+    SWITCHED RUBY VERSION TO: ruby-1.9.3-p125
+    NEW RUBY ROOT DIRECTORY : /usr/local/Cellar/ruby/ruby-1.9.3-p125
 
     % which ruby
 
-    /usr/local/Cellar/ruby/1.9.3-rc1/bin/ruby
+    /usr/local/Cellar/ruby/ruby-1.9.3-p125/bin/ruby
 
 
 Troubleshooting
@@ -257,17 +257,17 @@ Troubleshooting
 
 The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
 
-    % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version 1.9.3-rc1
+    % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version ruby-1.9.3-p125
 
 **Sorry, but ruby-version requires that the environment variable \$RUBY_VERSIONS is set in order to initialize bash completion.**
 
 The $RUBY_VERSIONS environment variable was not set...you can export it via your shell profile or you can set it on the fly as in the following:
 
-    % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version 1.9.3-rc1
+    % RUBY_VERSIONS=$HOME/local/ruby/versions ruby-version ruby-1.9.3-p125
 
-**Sorry, but ruby-version was unable to find directory '1.9.3-rc1' under '/home/your-user/local/ruby/versions'.**
+**Sorry, but ruby-version was unable to find directory 'ruby-1.9.3-p125' under '/home/your-user/local/ruby/versions'.**
 
-The version was entered incorrectly **(i.e. "ruby-version 1.9.i" instead of "ruby-version 1.9.3-rc1")** or you haven't yet compiled the given version.
+The version was entered incorrectly **(i.e. "ruby-version 1.9.i" instead of "ruby-version ruby-1.9.3-p125")** or you haven't yet compiled the given version.
 
 
 Resources
