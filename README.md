@@ -46,7 +46,7 @@ Features
 
 -   keeps it simple...no magic
 -   promotes multiple, per-user Ruby installs
--   shell completion (e.g. ruby-version jruby-[PRESS-TAB-NOW])
+-   shell completion (e.g. ruby-version ruby-[PRESS-TAB-NOW])
 -   provides access to the manpages of the current version by updating your `$MANPATH` environment variable
 -   defers to native shell commands where possible (e.g. `man irb`)
 -   unobtrusive install/uninstall (we won't leave files and symlinks all over the place)
@@ -138,7 +138,7 @@ In `$HOME/.bashrc` or `$HOME/.bash_profile` or your shell's equivalent
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
-    source $HOME/local/ruby-version/ruby-version.sh && ruby-version 1.9.3-rc1 >/dev/null
+    source $HOME/local/ruby-version/ruby-version.sh && ruby-version ruby-1.9.2-p318 >/dev/null
 
 **Configuration for Homebrew installs (the comment block is optional)**
 
@@ -148,7 +148,7 @@ In `$HOME/.bashrc` or `$HOME/.bash_profile` or your shell's equivalent
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
-    source $(brew --prefix ruby-version)/ruby-version.sh && ruby-version 1.9.3-rc1 >/dev/null
+    source $(brew --prefix ruby-version)/ruby-version.sh && ruby-version ruby-1.9.2-p318 >/dev/null
 
 
 Deactivate / Uninstall
@@ -169,11 +169,12 @@ Switching Versions
 
 **Call it like this in your terminal**
 
-    % ruby-version 1.9.3-rc1
+    % ruby-version ruby-1.9.2-p318
 
 **Bash Completion**
 
-    % ruby-version 1.[PRESS-TAB-NOW]
+    % ruby-version ruby-[PRESS-TAB-NOW]
+    % ruby-version jruby-[PRESS-TAB-NOW]
 
 
 Building Ruby from Source
@@ -189,7 +190,14 @@ or via a tool such as [ruby-build](https://github.com/sstephenson/ruby-build).
 **The following directory structure or equivalent is recommended (but not required):**
 
     % mkdir -p $HOME/local/ruby/download/
-    % mkdir -p $HOME/local/ruby/versions/{1.9.2,1.9.3-rc1}/src
+    % mkdir -p $RUBY_VERSIONS/1.9.3-p125/src
+
+**NOTE**: assumes you are installing the 1.9.3-p125 version of Ruby
+
+    % cd $HOME/local/ruby/download
+    % wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p125.tar.gz
+    % cd $RUBY_VERSIONS/1.9.3-p125/src
+    % gunzip -c $HOME/local/ruby/download/ruby-1.9.3-p125.tar.gz | tar xz --strip 1
 
 The following `configure`, `make`, and `make install` commands are the bare minimum for building on MAC OSX:
 
@@ -209,6 +217,21 @@ use homebrew:
     % brew install libyaml
 
 At this point, when you compile Ruby, you need to pass to the flag `--with-opt-dir=` you `libyaml` install directory.
+
+
+Installing JRuby
+-----------------------------
+
+**The following directory structure or equivalent is recommended (but not required):**
+
+    % mkdir -p $HOME/local/ruby/download/
+
+**This assumes you are installing the 1.6.7 version of JRuby:**
+
+    % cd $HOME/local/ruby/download
+    % wget http://jruby.org.s3.amazonaws.com/downloads/1.6.7/jruby-bin-1.6.7.tar.gz
+    % cd $RUBY_VERSIONS
+    % gunzip -c $HOME/local/ruby/download/jruby-bin-1.6.7.tar.gz | tar xz
 
 
 FAQ
