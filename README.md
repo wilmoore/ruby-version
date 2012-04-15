@@ -128,9 +128,9 @@ Download and Installation
 Activate Default Ruby version
 -----------------------------
 
-**In `$HOME/.bashrc` or `$HOME/.bash_profile` or your shell's equivalent**
+In `$HOME/.bashrc` or `$HOME/.bash_profile` or your shell's equivalent
 
-Configuration for standard installs
+**Configuration for standard installs**
 
     ########################################################################################
     # ruby-version (activate default Ruby version and autocompletion)
@@ -141,7 +141,7 @@ Configuration for standard installs
     source $HOME/local/ruby-version/ruby-version.sh && ruby-version 1.9.3-rc1 >/dev/null
 **NOTE**: the comment block is optional
 
-Configuration for Homebrew installs
+**Configuration for Homebrew installs**
 
     ########################################################################################
     # ruby-version (activate default Ruby version and autocompletion)
