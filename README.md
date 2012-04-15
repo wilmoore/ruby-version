@@ -139,7 +139,6 @@ Configuration for standard installs
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
     source $HOME/local/ruby-version/ruby-version.sh && ruby-version 1.9.3-rc1 >/dev/null
-
 **NOTE**: the comment block is optional
 
 Configuration for Homebrew installs
@@ -151,7 +150,6 @@ Configuration for Homebrew installs
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
     source $(brew --prefix ruby-version)/ruby-version.sh && ruby-version 1.9.3-rc1 >/dev/null
-
 **NOTE**: the comment block is optional
 
 Deactivate / Uninstall
