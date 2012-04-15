@@ -128,7 +128,7 @@ Download and Installation
 Activate Default Ruby version
 -----------------------------
 
-**In `$HOME/.bash_profile` or equivalent (NOTE: the comment block is optional)**
+**In `$HOME/.bashrc` or `$HOME/.bash_profile` or your shell's equivalent (NOTE: the comment block is optional)**
 
 Configuration for standard installs
 
