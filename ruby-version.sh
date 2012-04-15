@@ -6,7 +6,7 @@
 
 function ruby-version {
   local PROGRAM_APPNAME='ruby-version'
-  local PROGRAM_VERSION=0.0.1
+  local PROGRAM_VERSION=0.0.2
 
   # correct # of arguments?
   if [ $# != 1 ]; then
