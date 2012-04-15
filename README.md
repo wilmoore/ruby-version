@@ -195,20 +195,20 @@ or via a tool such as [ruby-build](https://github.com/sstephenson/ruby-build).
 **NOTE**: assumes you are installing the 1.9.3-p125 version of Ruby
 
     % cd $HOME/local/ruby/download
-    % wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p125.tar.gz
+    % wget ftp.ruby-lang.org/pub/ruby/ruby-1.9.3-p125.tar.gz
     % cd $RUBY_VERSIONS/1.9.3-p125/src
     % gunzip -c $HOME/local/ruby/download/ruby-1.9.3-p125.tar.gz | tar xz --strip 1
 
 The following `configure`, `make`, and `make install` commands are the bare minimum for building on MAC OSX:
 
-    % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml) --with-gcc=clang
+    % ./configure --prefix=${RUBY_VERSIONS}/ruby-1.9.3-p125.tar.gz --with-opt-dir=$(brew --prefix libyaml) --with-gcc=clang
     % make && make install
 
 **NOTE**: drop the `--with-gcc=clang` if you don't have clang. If you are on MAC OSX Lion, you probably want to keep the flag
 `--with-gcc=clang`; however, if you are on Linux and you've never heard of clang or know you didn't opt-into it, this option
 is likely not for you. In that case, your `configure` line would be:
 
-    % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml)
+    % ./configure --prefix=${RUBY_VERSIONS}/ruby-1.9.3-p125.tar.gz --with-opt-dir=$(brew --prefix libyaml)
     % make && make install
 
 **NOTE**: Ruby expects that you've installed a Yaml library such as `libyaml`. You may install `libyaml` manually or you can
