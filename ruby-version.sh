@@ -41,7 +41,7 @@ function ruby-version {
   # update binary search path
   export PATH="${RUBY_ROOT}/bin:$PATH"
 
-  # add current version's manual pages directory to $MANPATH if it exists
+  # add current version's manual pages directory to $MANPATH if it exists: I'm looking at you jruby :)
   if [ -d ${RUBY_ROOT}/share/man ]; then
     export MANPATH="${RUBY_ROOT}/share/man:$MANPATH"
   fi

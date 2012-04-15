@@ -1,8 +1,8 @@
-ruby-version: stupid simple RUBY version management
+ruby-version: stupid simple Ruby version management
 ===================================================
 
 
-**ruby-version** exposes a single command `ruby-version` allowing developers to switch between multiple versions of RUBY.
+**ruby-version** exposes a single command `ruby-version` allowing developers to switch between multiple versions of Ruby.
 
 **ruby-version** is conceptually similar to [rbenv](https://github.com/sstephenson/rbenv); however, **much** `simpler`.
 
@@ -16,7 +16,7 @@ ruby-version: stupid simple RUBY version management
 Who is it for?
 ----------------------------
 
-**ruby-version** is primarily for developers that compile multiple versions of RUBY on Linux or Mac.
+**ruby-version** is primarily for developers that compile multiple versions of Ruby on Linux or Mac.
 
 **ruby-version** gets out of the way so you can work with `ruby` the same as if you only had a single version installed.
 
@@ -38,15 +38,15 @@ Rationale
 >   this problem, [none](http://www.zenspider.com/ZSS/Products/ZenTest/) of the tools I've found were simple enough for me.
 
 
-**ruby-version** is excellent for automated testing of applications against multiple RUBY versions on a single machine.
+**ruby-version** is excellent for automated testing of applications against multiple Ruby versions on a single machine.
 
 
 Features
 ----------------------------
 
 -   keeps it simple...no magic
--   promotes multiple, per-user RUBY installs
--   shell completion (e.g. ruby-version 5.[PRESS-TAB-NOW])
+-   promotes multiple, per-user Ruby installs
+-   shell completion (e.g. ruby-version jruby-[PRESS-TAB-NOW])
 -   provides access to the manpages of the current version by updating your `$MANPATH` environment variable
 -   defers to native shell commands where possible (e.g. `man irb`)
 -   unobtrusive install/uninstall (we won't leave files and symlinks all over the place)
@@ -56,21 +56,21 @@ Non-Features
 ----------------------------
 
 -   does not rely on symlinks or sub-shells
--   does not compile/install RUBY. This is left up to you or you can use something like (ruby-build)[https://github.com/sstephenson/ruby-build]
+-   does not compile/install Ruby. This is left up to you or you can use something like (ruby-build)[https://github.com/sstephenson/ruby-build]
 
 
 Usage Examples
 ----------------------------
 
-**Switch to a specific RUBY version**
+**Switch to a specific Ruby version**
 
     % ruby-version <version>
 
-**List installed RUBY version(s)**
+**List installed Ruby version(s)**
 
     % ls $RUBY_VERSIONS
 
-**List the active RUBY version**
+**List the active Ruby version**
 
     % echo $RUBY_VERSION
 
@@ -125,7 +125,7 @@ Download and Installation
     % source $(brew --prefix ruby-version)/ruby-version.sh
 
 
-Activate Default RUBY version
+Activate Default Ruby version
 -----------------------------
 
 **In `$HOME/.bash_profile` or equivalent (NOTE: the comment block is optional)**
@@ -133,8 +133,8 @@ Activate Default RUBY version
 Configuration for standard installs
 
     ########################################################################################
-    # ruby-version (activate default RUBY version and autocompletion)
-    # export RUBY_VERSIONS                  => reflects location of compiled RUBY versions
+    # ruby-version (activate default Ruby version and autocompletion)
+    # export RUBY_VERSIONS                  => reflects location of compiled Ruby versions
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
@@ -143,8 +143,8 @@ Configuration for standard installs
 Configuration for Homebrew installs
 
     ########################################################################################
-    # ruby-version (activate default RUBY version and autocompletion)
-    # export RUBY_VERSIONS                  => reflects location of compiled RUBY versions
+    # ruby-version (activate default Ruby version and autocompletion)
+    # export RUBY_VERSIONS                  => reflects location of compiled Ruby versions
     # export RUBYVERSION_DISABLE_COMPLETE=1 => to disable shell completion
     ########################################################################################
     export RUBY_VERSIONS=${HOME}/local/ruby/versions
@@ -164,7 +164,7 @@ and the `RUBY_VERSIONS` environment variable (of course, keep the variable if us
     % rm -rf /path-to/ruby-version # or (brew uninstall ruby-version)
 
 
-Using (Switching Versions)
+Switching Versions
 -----------------------------
 
 **Call it like this in your terminal**
@@ -176,11 +176,11 @@ Using (Switching Versions)
     % ruby-version 1.[PRESS-TAB-NOW]
 
 
-Building RUBY from Source
+Building Ruby from Source
 -----------------------------
 
-**ruby-version** doesn't care how you've obtained your RUBY versions; it only cares that you've stored them neatly
-under a common directory structure. You may build multiple RUBY versions manually by typing:
+**ruby-version** doesn't care how you've obtained your Ruby versions; it only cares that you've stored them neatly
+under a common directory structure. You may build multiple Ruby versions manually by typing:
 
     $ ./configure --prefix=... && make && make install
 
@@ -203,18 +203,18 @@ is likely not for you. In that case, your `configure` line would be:
     % ./configure --prefix=${RUBY_VERSIONS}/1.9.3-rc1 --with-opt-dir=$(brew --prefix libyaml)
     % make && make install
 
-**NOTE**: RUBY expects that you've installed a Yaml library such as `libyaml`. You may install `libyaml` manually or you can
+**NOTE**: Ruby expects that you've installed a Yaml library such as `libyaml`. You may install `libyaml` manually or you can
 use homebrew:
 
     % brew install libyaml
 
-At this point, when you compile RUBY, you need to pass to the flag `--with-opt-dir=` you `libyaml` install directory.
+At this point, when you compile Ruby, you need to pass to the flag `--with-opt-dir=` you `libyaml` install directory.
 
 
 FAQ
 ----------------------------
 
-**What if my RUBY versions are not stored neatly under a single directory like `$HOME/local/ruby/versions`?**
+**What if my Ruby versions are not stored neatly under a single directory like `$HOME/local/ruby/versions`?**
 
 
     % RUBY_VERSIONS=/usr/local/Cellar/ruby ruby-version 1.9.3-rc1
