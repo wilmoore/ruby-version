@@ -35,7 +35,7 @@ Rationale
 
 >   While there are [smart](https://github.com/sstephenson/rbenv) [alternative](http://beginrescueend.com/)
 >   [tools](https://github.com/hmans/rbfu) that attempt to [solve](https://github.com/vertiginous/pik)
->   this problem, [none](http://www.zenspider.com/ZSS/Products/ZenTest/) of the tools I've found were simple enough for me.
+>   this problem, [none](http://www.zenspider.com/ZSS/Products/ZenTest/) of the tools I've found were [simple enough](http://stackoverflow.com/a/9422296/128346) for me.
 
 
 **ruby-version** is excellent for automated testing of applications against multiple Ruby versions on a single machine.
@@ -44,7 +44,7 @@ Rationale
 Features
 ----------------------------
 
--   keeps it simple...no magic
+-   keeps it simple...[no magic](http://batkin.tumblr.com/post/8847990062/on-rvms-cd-script)
 -   promotes multiple, per-user Ruby installs
 -   shell completion (e.g. ruby-version ruby-[PRESS-TAB-NOW])
 -   provides access to the manpages of the current version by updating your `$MANPATH` environment variable
@@ -279,6 +279,7 @@ Resources
 Alternatives
 ----------------------------
 
+-   [chruby](https://github.com/postmodern/chruby)
 -   [rbenv](https://github.com/sstephenson/rbenv)
 -   [rvm](http://beginrescueend.com/)
 -   [rbfu](https://github.com/hmans/rbfu)
@@ -291,6 +292,7 @@ Alternatives
 Inspiration
 ----------------------------
 
+-   [chruby](https://github.com/postmodern/chruby)
 -   [rbenv](https://github.com/sstephenson/rbenv)
 -   [php-version](https://github.com/wilmoore/php-version)
 
