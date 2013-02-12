@@ -1,4 +1,4 @@
-# I am no longer maintaining this as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent maintainer and contributors. Use it!!!
+# I am no longer actively maintaining `ruby-version` as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent maintainer and contributors. If you dig the idea behind `ruby-version`, you'll love [chruby][chruby]!!!
 
 
 
