@@ -1,4 +1,9 @@
-# I am no longer maintaining this as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent maintainer and contributors. Use IT!!!
+# I am no longer maintaining this as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent maintainer and contributors. Use it!!!
+
+
+
+
+
 
 **ruby-version** exposes a single command `ruby-version` allowing developers to switch between multiple versions of Ruby.
 
