@@ -1,4 +1,4 @@
-# I am no longer actively maintaining `ruby-version` as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent [maintainer][https://github.com/postmodern] and [contributors][chruby-contrib]. If you dig the idea behind `ruby-version`, you'll love [chruby][chruby]!!!
+# I am no longer actively maintaining `ruby-version` as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent [maintainer](https://github.com/postmodern) and [contributors][chruby-contrib]. If you dig the idea behind `ruby-version`, you'll love [chruby][chruby]!!!
 
 
 
