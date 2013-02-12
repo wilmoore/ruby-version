@@ -1,8 +1,4 @@
-ruby-version: stupid simple Ruby version management
-===================================================
-
-**NOTE**: [chruby][chruby] has the same design philosophy, please use it instead. I am.
-
+# I am no longer maintaining this as I'm now contributing to and using [chruby][chruby]. Same design philosophy and excellent maintainer and contributors. Use IT!!!
 
 **ruby-version** exposes a single command `ruby-version` allowing developers to switch between multiple versions of Ruby.
 
@@ -298,3 +294,5 @@ Inspiration
 -   [rbenv](https://github.com/sstephenson/rbenv)
 -   [php-version](https://github.com/wilmoore/php-version)
 
+
+[chruby]: https://github.com/postmodern/chruby
